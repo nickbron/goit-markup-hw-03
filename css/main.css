@@ -10,6 +10,8 @@
 }
 
 ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
   list-style-type: none;
 }
 
@@ -31,6 +33,8 @@ body {
 }
 
 .logof {
+  margin-top: 0px;
+  padding-top: 60px;
   color: var(--h-text-color);
   background-color: var(--hero-color);
 }
@@ -47,6 +51,12 @@ body {
   color: var(--title-text-color);
 }
 
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .site-nav .link,
 .contacts-nav .link {
   text-decoration: none;
@@ -55,21 +65,77 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav,
+.contacts-nav {
+  display: flex;
+}
+
+.contacts-nav {
+  margin-left: auto;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav {
+  margin-left: 93px;
+}
+
+.contacts-nav .item + .item {
+  margin-left: 50px;
 }
 
 /* section hero */
+.hero {
+  text-align: center;
+}
+
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 200px;
+  padding-bottom: 30px;
   background-color: var(--hero-color);
   color: var(--h-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
+.about {
+  margin-top: 94px;
+  /* display: block; */
+  /* display: inline-block; */
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
+  /* padding-left: 215px;
+  padding-right: 215px; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+
 .button-primary {
+  display: inline-block;
+  padding: 10px 32px;
+  margin-bottom: 200px;
+  min-width: 200px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid transparent;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -94,6 +160,8 @@ body {
 }
 
 .about-a {
+  margin-top: 0px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
@@ -109,14 +177,23 @@ body {
 /* чем занимаемся */
 .what-doing,
 .team {
+  margin-top: 0px;
+  /* margin-bottom: 50px; */
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   color: var(--primary-text-color);
+  text-align: center;
 }
 
 /* наша команда */
+.team-card {
+  /* margin-bottom: 30px; */
+}
+
 .name-card {
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.17;
@@ -174,4 +251,17 @@ body {
 .buttonp .button:focus {
   color: var(--h-text-color);
   background-color: var(--title-text-color);
+}
+
+/* .page-header {
+  outline: 2px solid tomato;
+} */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
 }
