@@ -12,6 +12,7 @@
 ul {
   margin-top: 0px;
   margin-bottom: 0px;
+  padding: 0px;
   list-style-type: none;
 }
 
@@ -30,13 +31,6 @@ body {
   font-size: 26px;
   line-height: 1.2;
   color: var(--logo-color);
-}
-
-.logof {
-  margin-top: 0px;
-  padding-top: 60px;
-  color: var(--h-text-color);
-  background-color: var(--hero-color);
 }
 
 /* Site nav */
@@ -99,6 +93,7 @@ body {
 /* section hero */
 .hero {
   text-align: center;
+  background-color: var(--hero-color);
 }
 
 .hero-title {
@@ -106,25 +101,13 @@ body {
   margin-bottom: 30px;
   padding-top: 200px;
   padding-bottom: 30px;
-  background-color: var(--hero-color);
+  /* background-color: var(--hero-color); */
   color: var(--h-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.about {
-  margin-top: 94px;
-  /* display: block; */
-  /* display: inline-block; */
-  /* padding-top: 94px;
-  padding-bottom: 94px; */
-  /* padding-left: 215px;
-  padding-right: 215px; */
-  /* display: flex; */
-  /* flex-wrap: wrap; */
 }
 
 .button-primary {
@@ -159,26 +142,52 @@ body {
   overflow: hidden;
 }
 
+.about {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.about-cont {
+  display: flex;
+}
+
 .about-a {
   margin-top: 0px;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
+  text-transform: uppercase;
   line-height: 1.17;
   color: var(--primary-text-color);
 }
 
 .about-b {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 14px;
   line-height: 1.7;
   color: var(--dop-text-color);
+}
+
+/* .about-card .item .about-b {
+  display: flex;
+} */
+
+.about-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  margin-right: 30px;
 }
 
 /* чем занимаемся */
 .what-doing,
 .team {
   margin-top: 0px;
-  /* margin-bottom: 50px; */
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -186,9 +195,49 @@ body {
   text-align: center;
 }
 
+.what-doing {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.what-doing-title {
+  margin-top: 0%;
+  margin-bottom: 50px;
+}
+
+.what-doing .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.card-doing {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 1170px;
+  /* width: calc(100%-60) / 3; */
+}
+
+.card-doing .li {
+  margin-right: 30px;
+  margin-top: 50px;
+  margin-bottom: 94px;
+}
+
 /* наша команда */
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  /* background-color: tomato; */
+}
+
 .team-card {
-  /* margin-bottom: 30px; */
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 1170px;
+}
+
+.team-title {
+  margin-top: 0%;
+  margin-bottom: 50px;
 }
 
 .name-card {
@@ -208,16 +257,36 @@ body {
 }
 
 /* section foot */
-.adr {
-  font-style: normal;
+.page-footer {
   background-color: var(--hero-color);
+}
+
+.logof {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 60px;
+  color: var(--h-text-color);
+  background-color: var(--hero-color);
+}
+
+.adr {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
   color: var(--h-text-color);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
 }
 
+.cont-text {
+  margin-top: 0px;
+  margin-bottom: 9px;
+}
+
 .contacts-navf .link {
+  display: block;
+  margin-bottom: 9px;
   text-decoration: none;
   color: var(--f-text-color);
 }
@@ -264,4 +333,9 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   outline: 2px solid tomato;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
