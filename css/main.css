@@ -7,6 +7,7 @@
   --f-text-color: rgba(255, 255, 255, 0.6);
   --logo-color: rgba(0, 0, 0, 1);
   --button-color: rgba(245, 244, 250, 1);
+  --card-border: rgba(238, 238, 238, 1);
 }
 
 ul {
@@ -184,6 +185,10 @@ body {
   margin-right: 30px;
 }
 
+.item:last-child {
+  margin-right: 0px;
+}
+
 /* чем занимаемся */
 .what-doing,
 .team {
@@ -241,7 +246,8 @@ body {
 }
 
 .name-card {
-  margin-top: 30px;
+  margin: 0px;
+  /* margin-top: 30px; */
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -250,10 +256,20 @@ body {
 }
 
 .specialty {
+  margin: 0px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.17;
   color: var(--dop-text-color);
+}
+
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: var(--h-text-color);
+  border: 1px solid;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 /* section foot */
@@ -292,6 +308,58 @@ body {
 }
 
 /* portfolio */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.buttonp,
+.our-works {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttonp {
+  padding-top: 94px;
+  padding-bottom: 34px;
+  justify-content: center;
+}
+
+.item-b {
+  margin-right: 8px;
+}
+
+.item-b:last-child {
+  margin-right: 0px;
+}
+
+.buttonp .button {
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.our-works {
+  padding-bottom: 94px;
+}
+
+.card-content {
+  padding: 20px 24px;
+  background: var(--h-text-color);
+  border: 1px solid var(--card-border);
+  box-sizing: border-box;
+}
+
+.photo-work {
+  margin-left: 30px;
+  padding-bottom: 30px;
+}
+
+.photo-work:nth-child(3n + 1) {
+  margin-left: 0px;
+}
+
 .heading-work {
   font-family: inherit;
   font-weight: 700;
@@ -321,10 +389,6 @@ body {
   color: var(--h-text-color);
   background-color: var(--title-text-color);
 }
-
-/* .page-header {
-  outline: 2px solid tomato;
-} */
 
 .container {
   margin-left: auto;
