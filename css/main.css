@@ -264,6 +264,8 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
   background: var(--h-text-color);
+  border: 1px solid;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
@@ -271,8 +273,8 @@ img {
   margin-right: 30px;
   /* border: 1px solid; */
   box-sizing: border-box;
-  border-radius: 4px;
-  width: calc (100% - 90) / 4;
+
+  /* flex-basis: calc(100% / 3 - 30); */
 }
 
 .team-card .item:last-child {
