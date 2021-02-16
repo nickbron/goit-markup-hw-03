@@ -13,7 +13,7 @@
 ul {
   margin-top: 0px;
   margin-bottom: 0px;
-  padding: 0px;
+  /* padding: 0px; */
   list-style-type: none;
 }
 
@@ -22,6 +22,12 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
   letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .logo,
@@ -101,8 +107,6 @@ body {
   margin-top: 0;
   margin-bottom: 30px;
   padding-top: 200px;
-  padding-bottom: 30px;
-  /* background-color: var(--hero-color); */
   color: var(--h-text-color);
   font-weight: 900;
   font-size: 44px;
@@ -152,8 +156,15 @@ body {
   display: flex;
 }
 
+.about-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
 .about-a {
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -163,29 +174,17 @@ body {
 }
 
 .about-b {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0;
   font-size: 14px;
   line-height: 1.7;
   color: var(--dop-text-color);
 }
 
-/* .about-card .item .about-b {
-  display: flex;
-} */
-
 .about-card {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
-}
-
-.item {
   margin-right: 30px;
 }
 
-.item:last-child {
+.about-card:last-child {
   margin-right: 0px;
 }
 
@@ -206,48 +205,46 @@ body {
 }
 
 .what-doing-title {
-  margin-top: 0%;
+  margin-top: 0;
   margin-bottom: 50px;
-}
-
-.what-doing .item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .card-doing {
   display: flex;
   flex-wrap: wrap;
   min-width: 1170px;
-  /* width: calc(100%-60) / 3; */
+  padding: 0;
 }
 
-.card-doing .li {
+.card-doing .item {
   margin-right: 30px;
-  margin-top: 50px;
   margin-bottom: 94px;
+}
+
+.card-doing .item:last-child {
+  margin-right: 0px;
 }
 
 /* наша команда */
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
-  /* background-color: tomato; */
 }
 
 .team-card {
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   min-width: 1170px;
 }
 
 .team-title {
-  margin-top: 0%;
+  margin-top: 0;
   margin-bottom: 50px;
 }
 
 .name-card {
   margin: 0px;
-  /* margin-top: 30px; */
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -256,7 +253,7 @@ body {
 }
 
 .specialty {
-  margin: 0px;
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.17;
@@ -267,9 +264,19 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
   background: var(--h-text-color);
-  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.team-card .item {
+  margin-right: 30px;
+  /* border: 1px solid; */
   box-sizing: border-box;
   border-radius: 4px;
+  width: calc (100% - 90) / 4;
+}
+
+.team-card .item:last-child {
+  margin-right: 0;
 }
 
 /* section foot */
@@ -278,16 +285,14 @@ body {
 }
 
 .logof {
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin: 0;
   padding-top: 60px;
+  margin-bottom: 20px;
   color: var(--h-text-color);
   background-color: var(--hero-color);
 }
 
 .adr {
-  display: flex;
-  flex-direction: column;
   font-style: normal;
   color: var(--h-text-color);
   font-weight: 400;
@@ -296,23 +301,21 @@ body {
 }
 
 .cont-text {
-  margin-top: 0px;
+  margin: 0;
   margin-bottom: 9px;
 }
 
 .contacts-navf .link {
-  display: block;
   margin-bottom: 9px;
   text-decoration: none;
   color: var(--f-text-color);
 }
 
-/* portfolio */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.contacts-navf {
+  padding: 0;
 }
+
+/* portfolio */
 
 .buttonp,
 .our-works {
@@ -322,7 +325,7 @@ img {
 
 .buttonp {
   padding-top: 94px;
-  padding-bottom: 34px;
+  padding-bottom: 50px;
   justify-content: center;
 }
 
@@ -336,40 +339,8 @@ img {
 
 .buttonp .button {
   display: block;
-  padding: 10px;
+  padding: 6px 22px;
   border-radius: 4px;
-}
-
-.our-works {
-  padding-bottom: 94px;
-}
-
-.card-content {
-  padding: 20px 24px;
-  background: var(--h-text-color);
-  border: 1px solid var(--card-border);
-  box-sizing: border-box;
-}
-
-.photo-work {
-  margin-left: 30px;
-  padding-bottom: 30px;
-}
-
-.photo-work:nth-child(3n + 1) {
-  margin-left: 0px;
-}
-
-.heading-work {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.description {
-  font-family: inherit;
-  font-size: 16px;
-  color: var(--dop-text-color);
 }
 
 .button {
@@ -390,16 +361,57 @@ img {
   background-color: var(--title-text-color);
 }
 
+.our-works {
+  padding: 0;
+  padding-bottom: 94px;
+}
+
+/* Наши работы */
+.card-content {
+  padding: 20px 24px;
+  background: var(--h-text-color);
+  border: 1px solid var(--card-border);
+  box-sizing: border-box;
+}
+
+.photo-work {
+  margin-left: 30px;
+  padding-bottom: 30px;
+}
+
+.photo-work:nth-child(3n + 1) {
+  margin-left: 0px;
+}
+
+.heading-work {
+  margin: 0;
+  margin-bottom: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.description {
+  margin: 0;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--dop-text-color);
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
-.section {
+/* .section {
   padding-top: 94px;
   padding-bottom: 94px;
+} */
+
+.page-header {
+  /* border-bottom: 1px solid tomato; */
 }
