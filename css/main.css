@@ -152,11 +152,11 @@ img {
   padding-bottom: 94px;
 }
 
-.about-cont {
+.about-card {
   display: flex;
 }
 
-.about-card {
+.about-card .item {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -180,11 +180,11 @@ img {
   color: var(--dop-text-color);
 }
 
-.about-card {
+.about-card .item {
   margin-right: 30px;
 }
 
-.about-card:last-child {
+.about-card .item:last-child {
   margin-right: 0px;
 }
 
@@ -205,6 +205,8 @@ img {
 }
 
 .what-doing-title {
+  font-weight: 700;
+  font-size: 36px;
   margin-top: 0;
   margin-bottom: 50px;
 }
@@ -218,7 +220,7 @@ img {
 
 .card-doing .item {
   margin-right: 30px;
-  margin-bottom: 94px;
+  /* margin-bottom: 94px; */
 }
 
 .card-doing .item:last-child {
@@ -239,6 +241,8 @@ img {
 }
 
 .team-title {
+  font-weight: 700;
+  font-size: 36px;
   margin-top: 0;
   margin-bottom: 50px;
 }
