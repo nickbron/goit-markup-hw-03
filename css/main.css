@@ -8,6 +8,9 @@
   --logo-color: rgba(0, 0, 0, 1);
   --button-color: rgba(245, 244, 250, 1);
   --card-border: rgba(238, 238, 238, 1);
+  --card-set-gap: 30px;
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 ul {
@@ -101,6 +104,7 @@ img {
 .hero {
   text-align: center;
   background-color: var(--hero-color);
+  /* padding-bottom: 94px; */
 }
 
 .hero-title {
@@ -220,7 +224,6 @@ img {
 
 .card-doing .item {
   margin-right: 30px;
-  /* margin-bottom: 94px; */
 }
 
 .card-doing .item:last-child {
@@ -228,16 +231,10 @@ img {
 }
 
 /* наша команда */
+
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.team-card {
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 1170px;
 }
 
 .team-title {
@@ -245,6 +242,33 @@ img {
   font-size: 36px;
   margin-top: 0;
   margin-bottom: 50px;
+}
+
+.team-card {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
+
+.team-card .item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
+.card-team {
+  box-shadow: var(--card-shadow);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.team-content {
+  padding: 30px;
 }
 
 .name-card {
@@ -262,27 +286,6 @@ img {
   font-size: 16px;
   line-height: 1.17;
   color: var(--dop-text-color);
-}
-
-.team-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background: var(--h-text-color);
-  border: 1px solid;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.team-card .item {
-  margin-right: 30px;
-  /* border: 1px solid; */
-  box-sizing: border-box;
-
-  /* flex-basis: calc(100% / 3 - 30); */
-}
-
-.team-card .item:last-child {
-  margin-right: 0;
 }
 
 /* section foot */
