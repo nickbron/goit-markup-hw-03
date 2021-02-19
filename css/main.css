@@ -8,6 +8,7 @@
   --logo-color: rgba(0, 0, 0, 1);
   --button-color: rgba(245, 244, 250, 1);
   --card-border: rgba(238, 238, 238, 1);
+  --header-border: #ececec;
   --card-set-gap: 30px;
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -31,6 +32,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.page-header {
+  outline: 1px solid var(--header-border);
 }
 
 .logo,
@@ -104,7 +109,6 @@ img {
 .hero {
   text-align: center;
   background-color: var(--hero-color);
-  /* padding-bottom: 94px; */
 }
 
 .hero-title {
@@ -252,27 +256,31 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
+  /* margin-top: calc(-1 * var(--card-set-gap)); */
+  max-width: 100%;
 }
 
 .team-card .item {
   flex-basis: calc(100% / 4 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  /* margin-top: var(--card-set-gap); */
 }
 
 .team-card .card-thumb img {
-  width: 370px;
+  width: 270px;
 }
 
 .card-team {
   box-shadow: var(--card-shadow);
-  border-radius: 4px;
-  overflow: hidden;
+  border-radius: 0px 0px 4px 4px;
+  /* overflow: hidden; */
 }
 
 .team-content {
-  padding: 30px;
+  padding: 30px 30px;
+  background: var(--h-text-color);
+  border: 1px solid var(--card-border);
+  box-sizing: border-box;
 }
 
 .name-card {
@@ -376,11 +384,10 @@ img {
 }
 
 .our-works {
-  padding-bottom: 94px;
-  padding: 0;
+  padding: 0px;
   margin: 0;
+  padding-bottom: 94px;
   list-style: none;
-
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
@@ -392,12 +399,11 @@ img {
 .our-works .item {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
-  padding-bottom: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
-.card-content {
+.card-content-works {
   padding: 20px 24px;
-  background: var(--h-text-color);
   border: 1px solid var(--card-border);
   box-sizing: border-box;
 }
