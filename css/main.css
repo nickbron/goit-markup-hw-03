@@ -261,6 +261,10 @@ img {
   margin-top: var(--card-set-gap);
 }
 
+.team-card .card-thumb img {
+  width: 370px;
+}
+
 .card-team {
   box-shadow: var(--card-shadow);
   border-radius: 4px;
@@ -372,11 +376,25 @@ img {
 }
 
 .our-works {
-  padding: 0;
   padding-bottom: 94px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 /* Наши работы */
+
+.our-works .item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  padding-bottom: var(--card-set-gap);
+}
+
 .card-content {
   padding: 20px 24px;
   background: var(--h-text-color);
@@ -384,13 +402,8 @@ img {
   box-sizing: border-box;
 }
 
-.photo-work {
-  margin-left: 30px;
-  padding-bottom: 30px;
-}
-
-.photo-work:nth-child(3n + 1) {
-  margin-left: 0px;
+.our-works .card-thumb img {
+  width: 370px;
 }
 
 .heading-work {
@@ -415,13 +428,4 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   /* outline: 2px solid tomato; */
-}
-
-/* .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-} */
-
-.page-header {
-  /* border-bottom: 1px solid tomato; */
 }
